@@ -74,6 +74,7 @@ require (
 	github.com/signalfx/defaults v1.2.2-0.20180531161417-70562fe60657
 	github.com/signalfx/golib/v3 v3.3.45
 	github.com/signalfx/signalfx-agent v1.0.1-0.20220907171532-facb8bd041ff
+	github.com/signalfx/splunk-otel-collector/receiver/oracledbreceiver v0.0.0-00010101000000-000000000000
 	github.com/signalfx/splunk-otel-collector/tests v0.0.0-00010101000000-000000000000
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cast v1.5.0
@@ -117,7 +118,7 @@ require (
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp v0.32.6 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/Microsoft/hcsshim v0.9.3 // indirect
-	github.com/SAP/go-hdb v0.108.1 // indirect
+	github.com/SAP/go-hdb v0.108.2 // indirect
 	github.com/Sectorbob/mlab-ns2 v0.0.0-20171030222938-d3aa0c295a8a // indirect
 	github.com/Shopify/sarama v1.36.0 // indirect
 	github.com/Showmax/go-fqdn v1.0.0 // indirect
@@ -276,7 +277,7 @@ require (
 	github.com/kolo/xmlrpc v0.0.0-20201022064351-38db28db192b // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/leoluk/perflib_exporter v0.1.0 // indirect
-	github.com/lib/pq v1.10.6 // indirect
+	github.com/lib/pq v1.10.7 // indirect
 	github.com/linkedin/goavro/v2 v2.9.8 // indirect
 	github.com/linode/linodego v1.8.0 // indirect
 	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
@@ -358,7 +359,7 @@ require (
 	github.com/samuel/go-zookeeper v0.0.0-20200724154423-2164a8ac840e // indirect
 	github.com/scaleway/scaleway-sdk-go v1.0.0-beta.9 // indirect
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
-	github.com/shirou/gopsutil/v3 v3.22.7 // indirect
+	github.com/shirou/gopsutil/v3 v3.22.8 // indirect
 	github.com/signalfx/com_signalfx_metrics_protobuf v0.0.3 // indirect
 	github.com/signalfx/gateway v1.2.23 // indirect
 	github.com/signalfx/gohistogram v0.0.0-20160107210732-1ccfd2ff5083 // indirect
@@ -398,7 +399,7 @@ require (
 	go.etcd.io/etcd/client/pkg/v3 v3.5.5 // indirect
 	go.mongodb.org/atlas v0.16.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
-	go.opentelemetry.io/collector/semconv v0.59.0 // indirect
+	go.opentelemetry.io/collector/semconv v0.60.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.34.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.34.0 // indirect
 	go.opentelemetry.io/contrib/propagators/b3 v1.9.0 // indirect
@@ -488,3 +489,5 @@ replace github.com/googleapis/gnostic v0.5.6 => github.com/googleapis/gnostic v0
 
 // required to drop dependency on deprecated git.apache.org/thrift.git
 exclude go.opencensus.io v0.19.1
+
+replace github.com/signalfx/splunk-otel-collector/receiver/oracledbreceiver => ./receiver/oracledbreceiver

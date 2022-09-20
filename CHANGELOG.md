@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### 💡 Enhancements 💡
+
+- Add a new Oracle database receiver
+
 ## v0.59.1
 
 ### 💡 Enhancements 💡
