@@ -6,6 +6,8 @@ The example runs as a Docker Compose deployment. The collector can be configured
 
 Splunk is configured to receive data from the OpenTelemetry Collector using the HTTP Event collector. To learn more about HEC, visit [our guide](https://dev.splunk.com/enterprise/docs/dataapps/httpeventcollector/).
 
+Prior to deploying this example, make sure you can pull images from the Github Container Registry. See those [instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) to get started.
+
 To deploy the example, check out this git repository, open a terminal and in this directory type:
 ```bash
 $> docker-compose up
