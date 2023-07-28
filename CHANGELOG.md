@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Offer an installer option to configure the network interface used by the collector ()[]
 
 ### 🛑 Breaking changes 🛑
 
