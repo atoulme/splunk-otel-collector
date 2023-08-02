@@ -582,7 +582,7 @@ update_registry -path "$regkey" -name "SPLUNK_HEC_TOKEN" -value "$hec_token"
 update_registry -path "$regkey" -name "SPLUNK_HEC_URL" -value "$hec_url"
 update_registry -path "$regkey" -name "SPLUNK_INGEST_URL" -value "$ingest_url"
 update_registry -path "$regkey" -name "SPLUNK_MEMORY_TOTAL_MIB" -value "$memory"
-update_registry -path "$regkey" -name "SPLUNK_NETWORK_INTERFACE" -value "$network_interface"
+update_registry -path "$regkey" -name "SPLUNK_LISTEN_INTERFACE" -value "$network_interface"
 update_registry -path "$regkey" -name "SPLUNK_REALM" -value "$realm"
 update_registry -path "$regkey" -name "SPLUNK_TRACE_URL" -value "$trace_url"
 

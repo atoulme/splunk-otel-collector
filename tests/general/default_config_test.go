@@ -35,9 +35,9 @@ func TestDefaultGatewayConfig(t *testing.T) {
 		"",
 		func(collector testutils.Collector) testutils.Collector {
 			return collector.WithArgs().WithEnv(map[string]string{
-				"SPLUNK_NETWORK_INTERFACE": "0.0.0.0",
-				"SPLUNK_ACCESS_TOKEN":      "not.real",
-				"SPLUNK_REALM":             "not.real",
+				"SPLUNK_LISTEN_INTERFACE": "0.0.0.0",
+				"SPLUNK_ACCESS_TOKEN":     "not.real",
+				"SPLUNK_REALM":            "not.real",
 			})
 		},
 	)
@@ -198,9 +198,9 @@ func TestDefaultAgentConfig(t *testing.T) {
 			return collector.WithArgs(
 				"--config", "/etc/otel/collector/agent_config.yaml",
 			).WithEnv(map[string]string{
-				"SPLUNK_NETWORK_INTERFACE": "0.0.0.0",
-				"SPLUNK_ACCESS_TOKEN":      "not.real",
-				"SPLUNK_REALM":             "not.real",
+				"SPLUNK_LISTEN_INTERFACE": "0.0.0.0",
+				"SPLUNK_ACCESS_TOKEN":     "not.real",
+				"SPLUNK_REALM":            "not.real",
 			})
 		},
 	)

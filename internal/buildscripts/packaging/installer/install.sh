@@ -1155,7 +1155,7 @@ parse_args_and_install() {
     rm -f "$collector_env_path"
   fi
 
-  configure_env_file "SPLUNK_NETWORK_INTERFACE" "$network_interface" "$collector_env_path"
+  configure_env_file "SPLUNK_LISTEN_INTERFACE" "$network_interface" "$collector_env_path"
   configure_env_file "SPLUNK_CONFIG" "$collector_config_path" "$collector_env_path"
   configure_env_file "SPLUNK_ACCESS_TOKEN" "$access_token" "$collector_env_path"
   configure_env_file "SPLUNK_REALM" "$realm" "$collector_env_path"
