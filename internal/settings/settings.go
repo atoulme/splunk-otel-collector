@@ -57,6 +57,7 @@ const (
 	DefaultMemoryBallastPercentage = 33
 	DefaultMemoryLimitPercentage   = 90
 	DefaultMemoryTotalMiB          = 512
+	DefaultListenInterface         = "0.0.0.0"
 )
 
 var (
@@ -345,6 +346,10 @@ func checkRuntimeParams(settings *Settings) error {
 	if 2*ballastSize > memLimit {
 		return fmt.Errorf("memory limit (%d) is less than 2x ballast (%d). Increase memory limit or decrease ballast size", memLimit, ballastSize)
 	}
+	if os.Getenv(ListenInterfaceEnvVar) == "" {
+		os.Setenv(ListenInterfaceEnvVar, DefaultListenInterface)
+	}
+
 	return nil
 }
 
