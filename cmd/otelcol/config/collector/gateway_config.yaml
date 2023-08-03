@@ -121,6 +121,9 @@ exporters:
     log_data_enabled: false
 
 service:
+  telemetry:
+    metrics:
+      address: "${SPLUNK_LISTEN_INTERFACE}:8888"
   extensions: [health_check, http_forwarder, zpages, memory_ballast]
   pipelines:
     traces:

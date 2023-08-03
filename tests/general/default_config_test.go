@@ -35,9 +35,8 @@ func TestDefaultGatewayConfig(t *testing.T) {
 		"",
 		func(collector testutils.Collector) testutils.Collector {
 			return collector.WithArgs().WithEnv(map[string]string{
-				"SPLUNK_LISTEN_INTERFACE": "0.0.0.0",
-				"SPLUNK_ACCESS_TOKEN":     "not.real",
-				"SPLUNK_REALM":            "not.real",
+				"SPLUNK_ACCESS_TOKEN": "not.real",
+				"SPLUNK_REALM":        "not.real",
 			})
 		},
 	)
@@ -155,6 +154,7 @@ func TestDefaultGatewayConfig(t *testing.T) {
 			},
 		},
 		"service": map[string]any{
+			"telemetry":  map[string]any{"metrics": map[string]any{"address": "0.0.0.0:8888"}},
 			"extensions": []any{"health_check", "http_forwarder", "zpages", "memory_ballast"},
 			"pipelines": map[string]any{
 				"logs": map[string]any{
@@ -198,9 +198,8 @@ func TestDefaultAgentConfig(t *testing.T) {
 			return collector.WithArgs(
 				"--config", "/etc/otel/collector/agent_config.yaml",
 			).WithEnv(map[string]string{
-				"SPLUNK_LISTEN_INTERFACE": "0.0.0.0",
-				"SPLUNK_ACCESS_TOKEN":     "not.real",
-				"SPLUNK_REALM":            "not.real",
+				"SPLUNK_ACCESS_TOKEN": "not.real",
+				"SPLUNK_REALM":        "not.real",
 			})
 		},
 	)
@@ -327,6 +326,7 @@ func TestDefaultAgentConfig(t *testing.T) {
 			"zipkin": map[string]any{
 				"endpoint": "0.0.0.0:9411"}},
 		"service": map[string]any{
+			"telemetry":  map[string]any{"metrics": map[string]any{"address": "0.0.0.0:8888"}},
 			"extensions": []any{"health_check", "http_forwarder", "zpages", "memory_ballast", "smartagent"},
 			"pipelines": map[string]any{
 				"logs": map[string]any{
